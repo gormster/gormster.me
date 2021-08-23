@@ -1,0 +1,20 @@
+{
+  "name": "gormster.me",
+  "version": "1.0.0",
+  "description": "main site on gormster.me",
+  "main": "index.js",
+  "author": "Morgan Harris <gormster@me.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-rc.0",
+    "@parcel/transformer-sass": "2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "posthtml-expressions": "^1.8.1",
+    "posthtml-include": "^1.7.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "bootstrap": "^5.1.0"
+  }
+}
