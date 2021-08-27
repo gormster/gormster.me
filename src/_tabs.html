@@ -1,0 +1,32 @@
+<div class="row mt-4">
+  <div class="col-12">
+    <ul class="nav nav-pills nav-fill" role="tablist">
+      <each loop="tab, index in tabs">
+        <li class="nav-item">
+          <a role="tab"
+            aria-controls="nav-{{ tab.id }}"
+            id="nav-{{ tab.id }}-tab"
+            class="nav-link"
+            aria-selected="false"
+            href="#{{ tab.id }}"
+            data-tab-id="{{tab.id}}">
+            <if condition="tab.icon">
+              <include src="_icon.html">{{ tab }}</include>
+            </if>
+            {{ tab.title }}
+          </a>
+        </li>
+      </each>
+    </ul>
+  </div>
+
+  <div class="col-12 blorp-tabs" id="tab-content">
+    <each loop="tab, index in tabs">
+      <div class="blorp" id="{{ tab.id }}" role="tabpanel" aria-labelledby="nav-{{ tab.id }}-tab"
+            data-hello-banner="{{ tab.hello.banner }}"
+            data-hello-image="{{ tab.hello.image }}"
+            data-hello-lead="{{ tab.hello.lead }}">
+        <include src="{{ tab.content }}" />
+      </div>
+    </each>
+  </div>

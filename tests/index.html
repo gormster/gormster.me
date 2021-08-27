@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <pre id="output"></pre>
+<script type="module">
+  import { TestSuite } from './assertion.js';
+  const testCases = ['./dumbcrypt.test.js'];
+  const output = document.getElementById('output');
+
+  function log(s) {
+    output.append(s + "\n");
+  }
+
+  async function runTests() {
+    let suite = new TestSuite(testCases, {logger: {log}});
+    await suite.runAll();
+  }
+
+  runTests()
+    .catch((err) => {
+      log(`Error: ${err}`);
+      console.error(err);
+    });
+
+</script>
+</body>
+</html>

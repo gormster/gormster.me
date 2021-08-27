@@ -7,11 +7,16 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@parcel/transformer-image": "2.0.0-rc.0",
-    "@parcel/transformer-sass": "2.0.0-rc.0",
-    "parcel": "^2.0.0-rc.0",
-    "posthtml-expressions": "^1.8.1",
-    "posthtml-include": "^1.7.1"
+    "del": "^6.0.0",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-sass": "^5.0.0",
+    "gulplog": "^1.0.0",
+    "handlebars": "^4.7.7",
+    "posthtml": "^0.16.5",
+    "posthtml-include": "^1.7.1",
+    "sass": "^1.38.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",

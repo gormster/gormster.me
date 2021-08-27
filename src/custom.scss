@@ -1,1 +1,107 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
+
+@mixin changeup($name, $color, $active-color) {
+
+  main.tab-#{$name} {
+    .nav-link {
+      color: $color;
+    }
+
+    .nav-link.active {
+      color: $active-color;
+      background-color: $color;
+    }
+  }
+
+  .btn-#{$name} {
+    @include button-variant($color, $color, $active-color);
+  }
+}
+
+@include changeup("moodle", $orange-500, $black);
+@include changeup("streaming", $pink-500, $white);
+@include changeup("mashups", $indigo-500, $white);
+
+.btn-soundcloud {
+  @include button-variant($orange-500, $orange-500, $black);
+}
+
+.btn-email {
+  @include button-variant($blue-500, $blue-500, $white);
+}
+
+.btn-outline-email {
+  @include button-outline-variant($blue-500);
+}
+
+$twitch-purple: rgb(145, 71, 255);
+.btn-twitch {
+  @include button-variant($twitch-purple, $twitch-purple, $white);
+}
+
+.blorp-tabs {
+  display: flex;
+  flex-direction: column;
+  max-width: 60em;
+  margin: 1rem auto;
+}
+
+.blorp {
+  max-height: 0px;
+  opacity: 0.0;
+  transition: opacity 0.15s linear 0s, max-height 0.01s step-end 0.16s;
+  pointer-events: none;
+}
+
+.blorp:target {
+  max-height: 9999px;
+  opacity: 1;
+  transition-delay: 0.18s, 0.18s;
+  pointer-events: initial;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg.icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline;
+  overflow: visible;
+  margin-right: 0.25rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+.debug-midline {
+  background-image: linear-gradient(to bottom, blue, blue) !important;
+  background-size: 100% 1px !important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+*/
+
+.preload * {
+  transition: none !important;
+}
+
+.contact-buttons, .email-button-wrapper {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  svg {
+    &.right {
+      margin-right: 0;
+    }
+  }
+}
+
+

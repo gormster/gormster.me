@@ -2,45 +2,42 @@
 <html>
 <head>
   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>gormster.me :: the guy you need to make your thing</title>
-  <link rel="stylesheet" href="./custom.scss">
-  <script locals>
-    module.exports = {
-      test: 'hello world'
-    }
-  </script>
+  <link rel="stylesheet" href="./custom.css">
+  <script type="module" src="index.js"></script>
 </head>
-<body>
-  <main class="container">
+<body class="preload">
+  <main class="container tab-ios">
     <div class="row mt-4 align-items-center">
       <div class="col-md-2 col-6 mx-auto">
-<img src="../static/portrait_japan.jpg" class="rounded-circle img-fluid border" alt="A photo of Morgan Harris" />
+      <img src="/static/portrait_japan.jpg" class="rounded-circle img-fluid border" alt="A photo of Morgan Harris" id="hello-image" />
       </div>
       <div class="col-10">
-        <h1 class="display-1" id="hello-banner">Hello, I'm Morgan.</h1>
-        <h2 class="lead" id="hello-lead">I'm the guy you need to make your thing.</h2>
+        <h1 class="display-2" id="hello-banner">Hello, I'm Morgan.</h1>
+        <h2 class="lead" id="hello-lead">I'm the guy you need to make your app.</h2>
       </div>
     </div>
 
-    <include src="src/tabs.html">
+    <include src="_tabs.html">
       {
         "tabs": [
           {
             "id": "ios",
+            "icon": "apple",
             "title": "iOS",
-            "content": "iOS dev text goes here",
+            "content": "tabs/_ios.html",
             "hello": {
               "image": "/static/portrait_japan.jpg",
               "banner": "Hello, I'm Morgan.",
               "lead": "I'm the guy you need to make your app."
             }
-
           },
           {
             "title": "Web",
             "id": "web",
-            "content": "Web content goes here",
+            "icon": "compass",
+            "content": "tabs/_web.html",
             "hello": {
               "image": "/static/portrait_japan.jpg",
               "banner": "Hello, I'm Morgan.",
@@ -50,7 +47,8 @@
           {
             "title": "Moodle",
             "id": "moodle",
-            "content": "Moodle content goes here",
+            "icon": "moodle",
+            "content": "tabs/_moodle.html",
             "hello": {
               "image": "/static/portrait_japan.jpg",
               "banner": "Hello, I'm Morgan.",
@@ -60,7 +58,8 @@
           {
             "title": "Streaming",
             "id": "streaming",
-            "content": "Streaming content goes here",
+            "icon": "twitch",
+            "content": "tabs/_streaming.html",
             "hello": {
               "image": "/static/dogward.jpg",
               "banner": "g'day, i'm gormster.",
@@ -70,18 +69,17 @@
           {
             "title": "Mashups",
             "id": "mashups",
-            "content": "Mashups content goes here",
+            "icon": "headphones",
+            "content": "tabs/_mashups.html",
             "hello": {
               "image": "/static/dogward.jpg",
               "banner": "this is Dogward Down.",
-              "lead": "custom mashup sets that will light up any dancefloor"
+              "lead": "bespoke mashup sets to light up your dancefloor"
             }
           }
         ]
       }
     </include>
-    <script type="module" src="index.js"></script>
-
   </main>
 
 
