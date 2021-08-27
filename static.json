@@ -1,5 +1,5 @@
 {
   "root": "dist/",
   "canonical_host": "gormster.me",
-  "https_only": true,
+  "https_only": true
 }
