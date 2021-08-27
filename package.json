@@ -7,13 +7,16 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "autoprefixer": "^10.3.3",
     "del": "^6.0.0",
     "esm": "^3.2.25",
     "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
     "gulp-posthtml": "^3.0.5",
     "gulp-sass": "^5.0.0",
     "gulplog": "^1.0.0",
     "handlebars": "^4.7.7",
+    "postcss": "^8.3.6",
     "posthtml": "^0.16.5",
     "posthtml-include": "^1.7.1",
     "sass": "^1.38.1"

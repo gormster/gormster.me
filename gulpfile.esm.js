@@ -5,6 +5,8 @@ import PostHtml from 'gulp-posthtml';
 import PHInclude from 'posthtml-include';
 import Del from 'del';
 import Path from 'path';
+import Autoprefixer from 'autoprefixer';
+import PostCSS from 'gulp-postcss';
 
 export const clean = () => Del([ OUTPUT_DIR ]);
 
@@ -50,6 +52,7 @@ function sassImporter(url, pre) {
 export function styles() {
   return Gulp.src('src/*.scss')
     .pipe(GulpSass(Sass)({importer: sassImporter}))
+    .pipe(PostCSS([ Autoprefixer() ]))
     .pipe(Gulp.dest(OUTPUT_DIR));
 }
 
