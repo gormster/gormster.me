@@ -76,6 +76,14 @@ svg.icon {
   margin-right: 0.25rem;
 }
 
+.big-icon {
+  margin-right: 0.5rem;
+  svg.icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 .nav-link {
   display: flex;
   align-items: center;
@@ -110,6 +118,30 @@ svg.icon {
   svg {
     &.right {
       margin-right: 0;
+    }
+  }
+}
+
+.dark-theme {
+  background-color: $dark;
+  color: $light;
+}
+
+.linktree {
+  a:link, a:visited {
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: $indigo-200 !important;
+    text-decoration: none;
+    &:hover, &:active {
+      color: $indigo-300;
+      background-color: $indigo-900;
+    }
+
+    time {
+      color: $gray-300;
+      font-size: 1rem;
     }
   }
 }
